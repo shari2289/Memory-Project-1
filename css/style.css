@@ -4,11 +4,11 @@
 body {
   height: 100vh;
   margin: 0;
-  background-color: lightslategray;
+  background-color: black;
 }
 
 .game-title {
-  color: pink;
+  color: rgb(197, 53, 122);
   font-family: fantasy;
   font-weight: bold;
   text-align: center;
@@ -16,7 +16,7 @@ body {
 }
 
 .Clock {
-  color: pink;
+  color: rgb(197, 53, 122);
   font-family: fantasy;
   font-weight: normal;
   text-align: left;
@@ -31,10 +31,10 @@ body {
   display: inline-block;
   width: 150px;
   height: 125px;
-  background-color: teal;
+  background-color: rgb(129, 239, 227);
 }
 
 .card:hover {
-  box-shadow: inset 0px 0px 0px 5px pink;
+  box-shadow: inset 0px 0px 0px 5px rgb(67, 62, 145);
   box-sizing: border-box;
 }
