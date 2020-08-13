@@ -1,31 +1,23 @@
 /*----- constants -----*/
-let cards;
+const cards = document.querySelectorAll(".card");
+
+let flippedCard = false;
+let firstCard, secondCard;
 
 /*----- app's state (variables) -----*/
 
 /*----- cached element references -----*/
-/*----- event listeners -----*
-<div class="card">
-        <div class="back-side">
-          <img src="Neon-Pink-S.jpg" />
-        </div>
-        <div class="front-side face hidden"></div>
-      </div>
+/*----- event listeners -----*/
+cards.forEach((card) => card.addEventListener("click", flipCard));
 /*----- functions -----*/
-function start() {
-  let cards = Array.from(document.getElementsByClassName("card"));
+function flipCard() {
+  this.classList.add("flip");
 
-  cards.forEach((card) => {
-    //console.log(card);
-    card.addEventListener("click", () => {
-      //flip cards
-    });
-  });
+  if (flippedCard) {
+    flippedCard = true;
+    firstCard = this;
+  } else {
+    flippedCard = false;
+    secondCard = this;
+  }
 }
-start();
-
-let img = document.createElement("img");
-let imgParent = document.getElementById("test");
-img.src = "imgs/Neon-Pink-S.jpg";
-console.log(imgParent);
-imgParent.appendChild(img);
