@@ -9,15 +9,23 @@ body {
 
 .game-title {
   color: rgb(197, 53, 122);
-  font-family: fantasy;
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
   text-align: center;
-  font-size: 60px;
+  font-size: 75px;
+}
+
+.welcome {
+  color: rgb(197, 53, 122);
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 55px;
 }
 
 .Clock {
   color: rgb(197, 53, 122);
-  font-family: fantasy;
+  font-family: "Poppins", sans-serif;
   font-weight: normal;
   text-align: left;
   font-size: 30px;
@@ -31,10 +39,10 @@ body {
   display: inline-block;
   width: 150px;
   height: 125px;
-  background-color: rgb(129, 239, 227);
+  background-color: black;
 }
 
-.card:hover {
+.back:hover {
   box-shadow: inset 0px 0px 0px 5px rgb(67, 62, 145);
   box-sizing: border-box;
 }
