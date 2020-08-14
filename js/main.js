@@ -3,37 +3,17 @@ const cards = document.querySelectorAll(".card");
 let lockGrid = false;
 let firstCard, secondCard;
 let flippedCard = false;
-let timeLeft = 90;
+let timeLeft = 50;
 let matchingCards = [];
 
 cards.forEach((card) => card.addEventListener("click", flipCard));
 
-function startTimer(duration, display) {
-  var timer = duration,
-    minutes,
-    seconds;
-  setInterval(function () {
-    minutes = parseInt(timer / 60, 10);
-    seconds = parseInt(timer % 60, 10);
-
-    minutes = minutes < 1 ? "0" + minutes : minutes;
-    seconds = seconds < 0 ? "30" + seconds : seconds;
-
-    display.textContent = minutes + ":" + seconds;
-
-    if (--timer < 0) {
-      timer = duration;
-    }
-  }, 1000);
-}
-
-window.onload = function () {
-  var gameTime = 90 * 1,
-    display = document.querySelector("#time-left");
-  startTimer(gameTime, display);
-  if ("#time-left" === 0);
-  gameOver();
-};
+var seconds = document.getElementById("time-left").textContent;
+var countdown = setInterval(function () {
+  seconds--;
+  document.getElementById("time-left").textContent = seconds;
+  if (seconds <= 0) clearInterval(countdown);
+}, 1000);
 
 function flipCard() {
   if (lockGrid) return;
@@ -81,7 +61,7 @@ function refreshGame() {
 }
 
 function gameOver() {
-  if (timeLeft === 0) display = document.querySelector("#game-over");
+  if (seconds === 0) display = document.querySelector("#game-over");
 }
 
 function gameWinner() {
