@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -8,27 +9,30 @@ body {
 }
 
 .game-title {
-  color: rgb(197, 53, 122);
+  color: aqua;
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
+  font-weight: normal;
   text-align: center;
-  font-size: 75px;
+  font-size: 70px;
+  text-shadow: 0 0 20px #fff;
 }
 
 .welcome {
-  color: rgb(197, 53, 122);
+  color: aqua;
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
+  font-weight: normal;
   text-align: center;
-  font-size: 55px;
+  font-size: 50px;
+  text-shadow: 0 0 20px #fff;
 }
 
 .Clock {
-  color: rgb(197, 53, 122);
+  color: aqua;
   font-family: "Poppins", sans-serif;
   font-weight: normal;
   text-align: left;
   font-size: 30px;
+  text-shadow: #fff;
 }
 
 .message {
@@ -38,7 +42,7 @@ body {
   color: deeppink;
   display: none;
   flex-direction: column;
-  font-family: fantasy;
+  font-family: "Poppins", sans-serif;
 }
 .replay {
   font-size: 30px;
