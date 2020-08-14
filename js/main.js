@@ -61,7 +61,7 @@ function refreshGame() {
 }
 
 function wonGame() {
-  if (matchingCards.length === 12 && seconds > 0) {
+  if (matchingCards.length == 12 && seconds > 0) {
     clearInterval(countdown);
     document.getElementById("winner").style.display = "block";
   }
