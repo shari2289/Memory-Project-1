@@ -68,8 +68,7 @@ function wonGame() {
 }
 
 function gameOver() {
-  if (matchingCards.length !== 12 && seconds <= 0) lockGrid = true;
-  {
+  if (matchingCards.length !== 12 && seconds <= 0) {
     document.getElementById("game-over").style.display = "block";
   }
 }
