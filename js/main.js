@@ -52,7 +52,7 @@ function notAMatch() {
     secondCard.classList.remove("flip");
 
     refreshGame();
-  }, 1000);
+  }, 1500);
 }
 
 function refreshGame() {
