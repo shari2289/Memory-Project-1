@@ -31,6 +31,19 @@ body {
   font-size: 30px;
 }
 
+.message {
+  margin: 0;
+  position: fixed;
+  justify-content: center;
+  color: deeppink;
+  display: none;
+  flex-direction: column;
+  font-family: fantasy;
+}
+.replay {
+  font-size: 30px;
+}
+
 .grid {
   width: 640px;
   height: 400px;
