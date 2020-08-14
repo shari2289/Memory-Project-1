@@ -41,6 +41,7 @@ function itsAMatch() {
   firstCard.removeEventListener("click", flipCard);
   secondCard.removeEventListener("click", flipCard);
   matchingCards.push(firstCard, secondCard);
+  wonGame();
   refreshGame();
 }
 
@@ -50,9 +51,8 @@ function notAMatch() {
   setTimeout(() => {
     firstCard.classList.remove("flip");
     secondCard.classList.remove("flip");
-
     refreshGame();
-  }, 1500);
+  }, 1300);
 }
 
 function refreshGame() {
@@ -60,12 +60,18 @@ function refreshGame() {
   [firstCard, secondCard] = [null, null];
 }
 
-function gameOver() {
-  if (seconds === 0) display = document.querySelector("#game-over");
+function wonGame() {
+  if (matchingCards.length === 12 && seconds > 0) {
+    clearInterval(countdown);
+    document.getElementById("winner").style.display = "block";
+  }
 }
 
-function gameWinner() {
-  if (matchingCards.length !== 12) display = document.querySelector("winner");
+function gameOver() {
+  if (matchingCards.length !== 12 && seconds <= 0) lockGrid = true;
+  {
+    document.getElementById("game-over").style.display = "block";
+  }
 }
 
 (function shuffle() {

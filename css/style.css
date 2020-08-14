@@ -36,16 +36,14 @@ body {
 }
 
 .message {
-  margin: 0;
-  position: fixed;
-  justify-content: center;
+  position: relative;
   color: aqua;
+  background-color: black;
   display: none;
-  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  z-index: 2;
   font-family: "Poppins", sans-serif;
-}
-.replay {
-  font-size: 30px;
 }
 
 .grid {
