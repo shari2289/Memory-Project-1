@@ -68,7 +68,7 @@ function wonGame() {
 }
 
 function gameOver() {
-  if (matchingCards.length !== 12 && seconds <= 0) {
+  if (matchingCards.length !== 12 && seconds < 1) {
     document.getElementById("game-over").style.display = "block";
   }
 }
